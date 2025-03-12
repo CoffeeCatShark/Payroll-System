@@ -24,8 +24,7 @@ class Employee{
 	int id;
 	int totalSalary;
 	public: 
-				Employee(){ name = "NULL"; salary = 0, employeeCount = 0, id = 000, totalSalary = 0;
-					}
+				Employee(){ name = "NULL"; salary = 0, employeeCount = 0, id = 000, totalSalary = 0;}
 	void setName(string x){name = x;}
 	void setID(int x){id = x;}
 	void setSalary(int x){salary = x;}
@@ -79,7 +78,7 @@ class Employee{
 		while(cin.fail()){
 				cin.clear();
 				cin.ignore(1000,'\n');
-				cout<<"Error: ID should only be a digit."<<endl;
+				cout<<"Error: Input should only be a digit."<<endl;
 				cout<<"Input: ";
 				cin>>z;
 				}
@@ -128,7 +127,7 @@ class PartTime: public Employee{
 		while(cin.fail()){
 				cin.clear();
 				cin.ignore(100,'\n');
-				cout<<"Error: ID should only be a digit."<<endl;
+				cout<<"Error: Input should only be a digit."<<endl;
 				cout<<"Input: ";
 				x = 0;
 				cin>>x;
@@ -170,7 +169,7 @@ class Contractual: public Employee{
 		while(cin.fail()){
 				cin.clear();
 				cin.ignore(100,'\n');
-				cout<<"Error: ID should only be a digit."<<endl;
+				cout<<"Error: Input should only be a digit."<<endl;
 				cout<<"Input: ";
 				x = 0;
 				cin>>x;
