@@ -47,10 +47,10 @@ class Employee{
 		getline(cin,x);
 		cout<<"ID: ";
 		cin>>y;
-		while(cin.fail()){
+		while(cin.fail() || y < 0){
 			cin.clear();
 			cin.ignore(1000,'\n');
-			cout<<"Error: ID should only be a digit."<<endl;
+			cout<<"Error: ID should only be a positive digit."<<endl;
 			cin>>y;
 		}
 		isRunning = true;
@@ -61,10 +61,10 @@ class Employee{
 					cout<<"Input: ";
 					cin.ignore();
 					cin>>y;
-					while(cin.fail()){
+					while(cin.fail() || y < 0){
 				cin.clear();
 				cin.ignore(1000,'\n');
-				cout<<"Error: ID should only be a digit."<<endl;
+				cout<<"Error: ID should only be a positive digit."<<endl;
 				cout<<"Input: ";
 				cin>>y;
 				}
@@ -75,10 +75,10 @@ class Employee{
 		cout<<"Salary: ";
 		cin.ignore();
 		cin>>z;
-		while(cin.fail()){
+		while(cin.fail() || z < 0){
 				cin.clear();
 				cin.ignore(1000,'\n');
-				cout<<"Error: Input should only be a digit."<<endl;
+				cout<<"Error: Input should only be a positive digit."<<endl;
 				cout<<"Input: ";
 				cin>>z;
 				}
@@ -124,10 +124,10 @@ class PartTime: public Employee{
 		cout<<"Hours Worked: ";
 		cin.ignore();
 		cin>>x;
-		while(cin.fail()){
+		while(cin.fail() || x < 0){
 				cin.clear();
 				cin.ignore(100,'\n');
-				cout<<"Error: Input should only be a digit."<<endl;
+				cout<<"Error: Input should only be a positive digit."<<endl;
 				cout<<"Input: ";
 				x = 0;
 				cin>>x;
@@ -166,10 +166,10 @@ class Contractual: public Employee{
 		cout<<"Projects: ";
 		cin.ignore();
 		cin>>x;
-		while(cin.fail()){
+		while(cin.fail() || x < 0){
 				cin.clear();
 				cin.ignore(100,'\n');
-				cout<<"Error: Input should only be a digit."<<endl;
+				cout<<"Error: Input should only be a positive digit."<<endl;
 				cout<<"Input: ";
 				x = 0;
 				cin>>x;
